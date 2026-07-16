@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Memories</title>
+
+    <link rel="stylesheet" href="Memories.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<!-- Intro -->
+
+<div id="intro" class="intro">
+
+    <h2>Before we continue...</h2>
+
+    <p>
+
+        There's one more song I'd love you to hear.
+        <br><br>
+
+        Because every memory feels
+        <br>
+
+        a little more magical with it.
+
+    </p>
+
+    <button id="playBtn">
+
+        ♫
+
+        <span>
+
+            Let's remember everything.
+
+        </span>
+
+    </button>
+
+</div>
+
+<!-- Memories -->
+
+<div class="container" id="memoriesContainer">
+
+    <div class="counter" id="counter">
+
+        1 / 10
+
+    </div>
+
+    <div class="polaroid">
+
+        <img
+        id="memoryImage"
+        src="images/memory1.jpg"
+        alt="Memory">
+
+        <div class="caption" id="caption">
+
+            The beginning of countless
+            <br>
+
+            beautiful memories. 🤍
+
+        </div>
+
+    </div>
+
+    <div class="controls">
+
+        <button id="prevBtn">
+
+            ❮
+
+        </button>
+
+        <button id="nextBtn">
+
+            ❯
+
+        </button>
+
+    </div>
+
+</div>
+
+<audio id="photoMusic" loop>
+
+    <source src="music/photograph.mp3" type="audio/mpeg">
+
+</audio>
+
+<script src="Memories.js"></script>
+
+</body>
+
+</html>

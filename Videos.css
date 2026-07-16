@@ -1,0 +1,230 @@
+/* ===========================
+RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    background:#F5EFEA;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+/* ===========================
+BACKGROUND
+=========================== */
+
+.background{
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+        linear-gradient(
+            rgba(252,250,248,.35),
+            rgba(242,234,227,.35)
+        ),
+        url("images/vintage-paper.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+/* ===========================
+INTRO
+=========================== */
+
+.intro{
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:rgba(245,239,234,.92);
+
+    backdrop-filter:blur(4px);
+
+    z-index:100;
+
+    transition:1s;
+
+}
+
+.intro.hide{
+
+    opacity:0;
+    pointer-events:none;
+
+}
+
+.intro h2{
+
+    font-size:52px;
+    color:#6F6258;
+    font-weight:500;
+    margin-bottom:20px;
+
+}
+
+.intro p{
+
+    font-size:24px;
+    color:#7D746C;
+    line-height:1.8;
+    margin-bottom:45px;
+
+}
+
+#playBtn{
+
+    border:none;
+    background:none;
+
+    cursor:pointer;
+
+    color:#8C8075;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    transition:.35s;
+
+}
+
+#playBtn span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:24px;
+
+}
+
+#playBtn:hover{
+
+    transform:scale(1.08);
+
+    color:#6F6258;
+
+}
+
+/* ===========================
+VIDEO CONTAINER
+=========================== */
+
+.container{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    opacity:0;
+
+    transition:1s;
+
+    z-index:5;
+
+}
+
+.container.show{
+
+    opacity:1;
+
+}
+
+/* ===========================
+VIDEO
+=========================== */
+
+video{
+
+    height:82vh;
+
+    width:auto;
+
+    border-radius:22px;
+
+    box-shadow:0 25px 45px rgba(0,0,0,.18);
+
+    transition:opacity .7s;
+
+}
+
+.fade{
+
+    opacity:0;
+
+}
+
+/* ===========================
+FINAL BUTTON
+=========================== */
+
+#finalBtn{
+
+    display:none;
+
+    margin-top:28px;
+
+    padding:14px 36px;
+
+    text-decoration:none;
+
+    background:#8C8075;
+
+    color:white;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+#finalBtn:hover{
+
+    background:#766B62;
+
+    transform:translateY(-3px);
+
+}

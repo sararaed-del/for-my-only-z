@@ -1,0 +1,238 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    background:#F5EFEA;
+
+    position:relative;
+
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(252,250,248,0.35),
+
+            rgba(242,234,227,0.35)
+
+        ),
+
+        url("images/vintage-paper.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    z-index:0;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   TITLES
+=========================== */
+
+h1{
+
+    font-size:48px;
+
+    color:#6F6258;
+
+    font-weight:400;
+
+}
+
+h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:58px;
+
+    color:#8A8178;
+
+    margin-top:8px;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   BOUQUET
+=========================== */
+
+.bouquet{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+.bouquet img{
+
+    width:360px;
+
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.18));
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+p{
+
+    margin-top:25px;
+
+    font-size:26px;
+
+    color:#7D746C;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.continue{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:16px 45px;
+
+background:#90A8C7;
+
+color:white;
+
+font-size:22px;
+
+text-decoration:none;
+
+border-radius:50px;
+
+transition:.35s;
+
+box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+}
+
+.continue:hover{
+
+background:#7895B6;
+
+transform:translateY(-4px) scale(1.03);
+
+}
+
+/* ===========================
+   FLOAT
+=========================== */
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+/* ===========================
+   PETALS
+=========================== */
+
+.petals{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    top:-100px;
+
+    animation:fall linear infinite;
+
+    opacity:.9;
+
+}
+
+@keyframes fall{
+
+    0%{
+
+        transform:
+        translateY(-100px)
+        rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        rotate(360deg);
+
+    }
+
+}

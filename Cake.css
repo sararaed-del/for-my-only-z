@@ -1,0 +1,197 @@
+/* ===========================
+RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    background:#F5EFEA;
+
+    position:relative;
+
+}
+
+/* ===========================
+BACKGROUND
+=========================== */
+
+.background{
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(252,250,248,0.35),
+
+            rgba(242,234,227,0.35)
+
+        ),
+
+        url("images/vintage-paper.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    z-index:0;
+
+}
+
+/* ===========================
+CONTAINER
+=========================== */
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+/* ===========================
+TITLE
+=========================== */
+
+h1{
+
+    font-size:50px;
+
+    color:#6F6258;
+
+    font-weight:400;
+
+}
+
+h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:58px;
+
+    color:#8A8178;
+
+    margin-top:8px;
+
+    margin-bottom:30px;
+
+}
+
+/* ===========================
+CAKE
+=========================== */
+
+.cake{
+
+    width:420px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    animation:float 4s ease-in-out infinite;
+
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.18));
+
+}
+
+.cake:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ===========================
+TEXT
+=========================== */
+
+p{
+
+    margin-top:25px;
+
+    font-size:28px;
+
+    color:#7D746C;
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+BUTTON
+=========================== */
+
+#continueBtn{
+
+    display:none;
+
+    margin-top:35px;
+
+    text-decoration:none;
+
+    background:#90A8C7;
+
+    color:white;
+
+    padding:15px 40px;
+
+    border-radius:50px;
+
+    font-size:22px;
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+}
+
+#continueBtn:hover{
+
+    background:#7895B6;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+FLOAT
+=========================== */
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}

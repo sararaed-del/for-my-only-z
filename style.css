@@ -1,0 +1,337 @@
+body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(to bottom,#dff6ff,#bfeaff,#97d8ff);
+
+    font-family:Georgia,serif;
+
+    color:#334d6e;
+
+    text-align:center;
+
+    position:relative;
+}
+
+/* ---------- TEXT ---------- */
+
+h1{
+    font-size:70px;
+    margin:0;
+    letter-spacing:2px;
+}
+
+h2{
+    font-size:34px;
+    margin:15px 0;
+    color:#4B6889;
+}
+
+p{
+    font-size:22px;
+    color:#6c8cae;
+    margin:15px 0 40px;
+}
+
+/* ---------- BUTTON ---------- */
+
+button{
+
+    padding:18px 48px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ffD9E6;
+
+    color:#607693;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+    box-shadow:0 20px 40px rgba(255,180,205,.8);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:120%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.9),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+button:hover::before{
+
+    left:120%;
+
+}
+
+/* ---------- SUN ---------- */
+
+.sun{
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    top:-150px;
+    right:-150px;
+
+    background:radial-gradient(circle,#fff8b0,#ffd54f);
+
+    filter:blur(12px);
+
+    box-shadow:0 0 90px rgba(255,220,90,.8);
+
+}
+
+/* ---------- CLOUD ---------- */
+
+.cloud{
+
+    position:absolute;
+
+    width:120px;
+    height:42px;
+
+    background:white;
+
+    border-radius:50px;
+
+    opacity:.9;
+
+}
+
+.cloud::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:55px;
+    height:55px;
+
+    background:white;
+
+    border-radius:50%;
+
+    top:-25px;
+    left:18px;
+
+}
+
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:65px;
+    height:65px;
+
+    background:white;
+
+    border-radius:50%;
+
+    top:-33px;
+    right:15px;
+
+}
+
+/* ---------- CLOUD POSITIONS ---------- */
+
+.cloud1{
+
+    top:80px;
+    left:90px;
+
+}
+
+.cloud2{
+
+    top:260px;
+    left:180px;
+
+    transform:scale(.8);
+
+}
+
+.cloud3{
+
+    top:120px;
+    right:140px;
+
+    transform:scale(.75);
+
+}
+
+.cloud4{
+
+    bottom:90px;
+    right:120px;
+
+    transform:scale(.85);
+
+}
+
+.cloud5{
+
+    bottom:170px;
+    left:320px;
+
+    transform:scale(.65);
+
+}
+
+/* ---------- FLOAT ---------- */
+
+.cloud1{animation:float1 7s ease-in-out infinite;}
+.cloud2{animation:float2 9s ease-in-out infinite;}
+.cloud3{animation:float3 8s ease-in-out infinite;}
+.cloud4{animation:float4 10s ease-in-out infinite;}
+.cloud5{animation:float5 6s ease-in-out infinite;}
+
+@keyframes float1{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+
+@keyframes float2{
+0%,100%{transform:scale(.8) translateY(0);}
+50%{transform:scale(.8) translateY(-10px);}
+}
+
+@keyframes float3{
+0%,100%{transform:scale(.75) translateY(0);}
+50%{transform:scale(.75) translateY(-15px);}
+}
+
+@keyframes float4{
+0%,100%{transform:scale(.85) translateY(0);}
+50%{transform:scale(.85) translateY(-12px);}
+}
+
+@keyframes float5{
+0%,100%{transform:scale(.65) translateY(0);}
+50%{transform:scale(.65) translateY(-8px);}
+}
+
+/* ---------- FADE ---------- */
+
+.fade1,
+.fade2,
+.fade3,
+.fade4{
+
+    opacity:0;
+
+    animation:fade 1.2s forwards;
+
+}
+
+.fade1{animation-delay:.3s;}
+.fade2{animation-delay:.9s;}
+.fade3{animation-delay:1.5s;}
+.fade4{animation-delay:2.1s;}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+.gift-btn{
+    display:inline-block;
+    text-decoration:none;
+
+    background:#FFE9EF;
+    color:#5B708B;
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:.35s;
+}
+
+.gift-btn:hover{
+    transform:scale(1.08);
+    background:#FFDCE7;
+    box-shadow:0 15px 35px rgba(255,190,210,.55);
+}
+
+.gift-btn:active{
+    transform:scale(.95);
+}
